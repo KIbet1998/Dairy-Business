@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
         <title></title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -23,10 +24,24 @@
         <label for="ShedC">Shed C</label>
         <input type="text" id="third" name="first">
         </div>
-        <div class="input-field">
 
+        <div class="input-field">
         <label for="ShedD">Shed D</label>
         <input type="text" id="fourth" name="first">
         </div>
-    </body>
+        <div class="input-field">
+        <input type="button" id="button" value="Production" onclick="total()">
+        <input type="button" id="button" value="reset" onclick="reset()">
+        </div>
+
+        <div id="displayFirst"></div>
+        <div id="displaySecond"></div>
+        <div id="displayThird"></div>
+        <div id="displayFourth"></div>
+        <div id="displayOutput"></div>
+        <div id="display"></div>
+
+        <input type="button" id="button" value="income" onclick="incomeOverTime()">
+        
+        </body>
 </html>
