@@ -71,6 +71,6 @@ var income = parseFloat(periodw) * parseFloat(selling_price) * parseFloat(output
     
     document.getElementById("display").innerHTML= "The total weekly income is Ksh " + income;
     document.getElementById("displayY").innerHTML= "The total yearly income is Ksh " + incomey;
-    document.getElementById("display").innerHTML= "The total monthly income is Ksh " + incomeOverTime;
+    document.getElementById("display").innerHTML= "The total monthly income is Ksh " + incomem;
 }
 
