@@ -1,3 +1,4 @@
+var output;
 var sheds=[
     {
         name: "shed A",
@@ -42,7 +43,7 @@ var total = function (){
     var third = document.getElementById("third").value;
     var fourth = document.getElementById("fourth").value;
 
-    var output = parseFloat(first) + parseFloat(second) + parseFloat(third) + parseFloat(fourth);
+    output = parseFloat(first) + parseFloat(second) + parseFloat(third) + parseFloat(fourth);
     
 
     if(!isNaN(output)){
@@ -56,13 +57,20 @@ var total = function (){
     }
 }
 
-var selling_price = 45;
-var income = 0;
-var period = 7;
-income = period * output * selling_price;
 function incomeOverTime(price,period){
-    document.getElementById("display").innerHTML = ' ';
+    var selling_price = 45;
+//var income = 0;
+//var income = period * selling_price * output;
+var periodw = 7;
+var periody = 365;
+var periodm = 30;
+var income = parseFloat(periodw) * parseFloat(selling_price) * parseFloat(output);
+    //document.getElementById("display").innerHTML = ' ';
+    var incomey = parseFloat(periody) * parseFloat(selling_price) * parseFloat(output);
+    var periodm = parseFloat(periodm) *parseFloat(selling_price) * parseFloat(output); 
     
-    document.getElementById("display").innerHTML= "The total production is " + income + "litres per day";
+    document.getElementById("display").innerHTML= "The total weekly income is Ksh " + income;
+    document.getElementById("displayY").innerHTML= "The total yearly income is Ksh " + incomey;
+    document.getElementById("display").innerHTML= "The total monthly income is Ksh " + incomeOverTime;
 }
 
