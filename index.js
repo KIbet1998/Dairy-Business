@@ -56,21 +56,82 @@ var total = function (){
 
     }
 }
-
+var selling_price = 45;
 function incomeOverTime(price,period){
-    var selling_price = 45;
+   
 //var income = 0;
 //var income = period * selling_price * output;
 var periodw = 7;
 var periody = 365;
-var periodm = 30;
 var income = parseFloat(periodw) * parseFloat(selling_price) * parseFloat(output);
     //document.getElementById("display").innerHTML = ' ';
     var incomey = parseFloat(periody) * parseFloat(selling_price) * parseFloat(output);
-    var periodm = parseFloat(periodm) *parseFloat(selling_price) * parseFloat(output); 
     
     document.getElementById("display").innerHTML= "The total weekly income is Ksh " + income;
     document.getElementById("displayY").innerHTML= "The total yearly income is Ksh " + incomey;
-    document.getElementById("display").innerHTML= "The total monthly income is Ksh " + incomem;
 }
+
+function incomeOverLeapYear(month,days){
+    var january = {
+        month : "January",
+        days : 31
+    }
+    var february = {
+        month  : "february",
+        days : 29
+    }
+    var march = {
+        month  : "march",
+        days : 31
+    }
+    var april = {
+        month  : "april",
+        days : 30
+    }
+    var may = {
+        month  : "may",
+        days : 31
+    }
+    var june = {
+        month  : "June",
+        days : 30
+    }
+    var july = {
+        month  : "July",
+        days : 31
+    }
+    var august = {
+        month  : "august",
+        days : 31
+    }
+    var september = {
+        month  : "september",
+        days : 30
+    }
+    var october = {
+        month  : "october",
+        days : 31
+    }
+    var november = {
+        month  : "november",
+        days : 30
+    }
+    var december = {
+        month  : "december",
+        days : 31
+    }
+   var leapYear = [january,february,march,april,may,june,july,august,september,october,november,december];
+   for (var i=0; i<leapYear.length; i++) {
+       var monthlyReturns = leapYear[i].days * output * selling_price;
+       //leapYear.monthlyReturns;
+       var display1 = document.getElementById("display1");
+
+       display1.innerHTML += "Your income for " + leapYear[i].month + "is Ksh " + monthlyReturns + "<br>";
+
+   }
+    
+        
+    }
+
+
 
